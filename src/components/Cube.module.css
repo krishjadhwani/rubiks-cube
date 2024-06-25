@@ -1,0 +1,17 @@
+/* src/components/Cube.module.css */
+.cube {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.row {
+    display: flex;
+    gap: 2px;
+}
+
+.spacer {
+    width: 156px;
+    /* Adjust this based on the width of your Face component */
+}
