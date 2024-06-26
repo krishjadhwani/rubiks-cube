@@ -100,6 +100,11 @@
     "types": [
       "node",
       "react"
+    ],
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/styles.d.ts"
     ]
   }
 }

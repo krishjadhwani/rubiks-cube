@@ -1,0 +1,52 @@
+/* src/App.module.css */
+
+.app {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cubeContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.controlsContainer {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.instruction {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .app {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .cubeContainer {
+        margin-bottom: 20px;
+    }
+
+    .controlsContainer {
+        padding: 15px;
+    }
+}

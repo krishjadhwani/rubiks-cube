@@ -9,10 +9,9 @@ interface SquareData {
 
 interface FaceProps {
     squares: SquareData[]
-    faceLabel: string
 }
 
-const Face: React.FC<FaceProps> = ({ squares, faceLabel }) => {
+const Face: React.FC<FaceProps> = ({ squares }) => {
     return (
         <div className={styles.face}>
             {squares.map((square, index) => (

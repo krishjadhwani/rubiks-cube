@@ -1,0 +1,31 @@
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.faceControls {
+    display: flex;
+    gap: 5px;
+}
+
+.resetControl {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.resetControl button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.resetControl button:hover {
+    background-color: #e0e0e0;
+}

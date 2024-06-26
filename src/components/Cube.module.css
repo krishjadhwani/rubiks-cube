@@ -1,4 +1,3 @@
-/* src/components/Cube.module.css */
 .cube {
     display: flex;
     flex-direction: column;
@@ -13,5 +12,4 @@
 
 .spacer {
     width: 156px;
-    /* Adjust this based on the width of your Face component */
 }

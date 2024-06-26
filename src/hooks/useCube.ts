@@ -9,13 +9,15 @@ interface Square {
 
 export type CubeState = Record<FaceName, Square[]>
 
-const initialState: CubeState = {
-    U: Array(9).fill(null).map((_, i) => ({ color: 'white', label: `U${i + 1}` })),
-    F: Array(9).fill(null).map((_, i) => ({ color: 'green', label: `F${i + 1}` })),
-    R: Array(9).fill(null).map((_, i) => ({ color: 'red', label: `R${i + 1}` })),
-    B: Array(9).fill(null).map((_, i) => ({ color: 'blue', label: `B${i + 1}` })),
-    L: Array(9).fill(null).map((_, i) => ({ color: 'orange', label: `L${i + 1}` })),
-    D: Array(9).fill(null).map((_, i) => ({ color: 'yellow', label: `D${i + 1}` })),
+const createInitialState = (): CubeState => {
+    return {
+        U: Array(9).fill(null).map((_, i) => ({ color: 'white', label: `U${i + 1}` })),
+        F: Array(9).fill(null).map((_, i) => ({ color: 'green', label: `F${i + 1}` })),
+        R: Array(9).fill(null).map((_, i) => ({ color: 'red', label: `R${i + 1}` })),
+        B: Array(9).fill(null).map((_, i) => ({ color: 'blue', label: `B${i + 1}` })),
+        L: Array(9).fill(null).map((_, i) => ({ color: 'orange', label: `L${i + 1}` })),
+        D: Array(9).fill(null).map((_, i) => ({ color: 'yellow', label: `D${i + 1}` })),
+    }
 }
 
 type AdjacentFaces = [FaceName, number[], FaceName, number[], FaceName, number[], FaceName, number[]]
@@ -30,7 +32,7 @@ const adjacentFacesMap: Record<FaceName, AdjacentFaces> = {
 }
 
 const useCube = () => {
-    const [cube, setCube] = useState<CubeState>(initialState)
+    const [cube, setCube] = useState<CubeState>(createInitialState())
 
     const rotateFace = (face: FaceName, isClockwise: boolean) => {
         setCube(prevCube => {
@@ -46,7 +48,11 @@ const useCube = () => {
         })
     }
 
-    return { cube, rotateFace }
+    const resetCube = () => {
+        setCube(createInitialState())
+    }
+
+    return { cube, rotateFace, resetCube }
 }
 
 const rotateFaceArray = (face: Square[], isClockwise: boolean): Square[] => {

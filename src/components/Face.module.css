@@ -1,10 +1,7 @@
-/* src/components/Face.module.css */
 .face {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     width: 156px;
-    /* Adjust this based on your Square size */
     height: 156px;
-    /* Adjust this based on your Square size */
 }
